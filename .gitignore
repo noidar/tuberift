@@ -1,0 +1,27 @@
+node_modules/
+dist/
+dist-electron/
+release/
+bin/
+.DS_Store
+*.log
+*.tsbuildinfo
+
+# local environment files
+.env
+.env.*
+!.env.example
+
+# test and coverage outputs
+coverage/
+
+# editor and OS artifacts
+.vscode/
+.idea/
+Thumbs.db
+
+# package manager debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
