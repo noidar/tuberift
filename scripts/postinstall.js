@@ -27,7 +27,7 @@ function get(url) {
   return new Promise((resolve, reject) => {
     const client = url.startsWith("https") ? https : http;
     client
-      .get(url, { headers: { "User-Agent": "yt-downloader" } }, (res) => {
+      .get(url, { headers: { "User-Agent": "tuberift" } }, (res) => {
         if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
           return get(res.headers.location).then(resolve, reject);
         }

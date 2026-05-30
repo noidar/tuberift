@@ -1,4 +1,4 @@
-# YT Downloader
+# Tuberift
 
 Electron desktop app for downloading YouTube videos. Built with React + MUI + TypeScript. Powered by [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
@@ -14,7 +14,7 @@ Electron desktop app for downloading YouTube videos. Built with React + MUI + Ty
 ## Setup
 
 ```bash
-cd yt-downloader
+cd tuberift
 npm install       # installs deps + auto-downloads yt-dlp binary into bin/
 npm run dev       # starts Vite dev server + Electron
 ```
@@ -36,7 +36,7 @@ git init
 git add .
 git commit -m "chore: initial commit"
 git branch -M main
-git remote add origin https://github.com/<your-username>/yt-downloader.git
+git remote add origin https://github.com/<your-username>/tuberift.git
 git push -u origin main
 ```
 

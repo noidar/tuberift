@@ -115,7 +115,7 @@ app.whenReady().then(() => {
       const notify: boolean = store.get("notifyOnComplete") as boolean;
       if (notify && Notification.isSupported() && (!mainWindow || !mainWindow.isFocused())) {
         new Notification({
-          title: "YT Downloader",
+          title: "Tuberift",
           body: "All downloads complete ✓",
         }).show();
       }
