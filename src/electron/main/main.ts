@@ -69,8 +69,13 @@ function createWindow(): void {
   if (IS_DEV) {
     mainWindow.loadURL("http://localhost:5173");
   } else {
-    mainWindow.loadFile(path.join(__dirname, "..", "..", "dist", "index.html"));
+    // In packaged builds, app root is app.asar and renderer lives at dist/index.html.
+    mainWindow.loadFile(path.join(app.getAppPath(), "dist", "index.html"));
   }
+
+  mainWindow.webContents.on("did-fail-load", (_event, code, description, validatedURL) => {
+    logError("Renderer failed to load:", code, description, validatedURL);
+  });
 
   mainWindow.once("ready-to-show", () => {
     mainWindow!.show();
